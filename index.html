@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./index.js"></script>
+</head>
+
+<body id="test">
+    <input type="text" coco-model="aaa">
+</body>
+
+<script>
+    var vm1 = cocoVue({
+        el: "test",
+        data: {
+            aaa: 1,
+            bbb: 22,
+        }
+    })
+
+    setInterval(() =>{
+        vm1.aaa = Number(vm1.aaa) + 1;
+    }, 5000)
+</script>
+</html>
+
